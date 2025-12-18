@@ -1,0 +1,26 @@
+{
+  "name": "node-backend",
+  "version": "1.0.0",
+  "description": "Node JS lessons",
+  "keywords": [
+    "Node",
+    "JS",
+    "Programming"
+  ],
+  "license": "ISC",
+  "author": "STARTUM",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "dependencies": {
+    "prime-cort-nums": "^1.0.1",
+    "random-prime": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
