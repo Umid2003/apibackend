@@ -6,10 +6,19 @@
     <title>Document</title>
 </head>
 <body> 
-    <h1>Hello</h1>
-    <form action="" method="post">
-        <input type="email" placeholder="Email" name="" id="">
-        <button type="submit">Send</button>
-    </form>
+    <div class="cards"></div>
+    <script>
+        const cards=document.querySelector('.cards')
+        fetch('http://localhost:3700/api/user').then(res=>res.json()).then(data=>data.map((item,index)=>{
+            const div=document.createElement('div')
+            div.innerHTML=`
+            <img src=${item.image}/>
+            <h2>${item.model}</h2>
+            <p> $ ${item.price}</p>
+            <p> ${item.year}</p>
+            `
+            cards.append(div)
+        })).catch(err=>console.log(err))
+    </script>
 </body>
 </html>
